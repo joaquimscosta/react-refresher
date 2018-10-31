@@ -23,5 +23,4 @@ class SearchBar extends Component {
         this.setState({ term: event.target.value })
     }
 }
-
 export default SearchBar
