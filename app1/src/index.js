@@ -10,33 +10,33 @@ const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY
 
 // Create  a new component
 class App extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            videos: [],
-            selectedVideo: null
-        }
+  constructor (props) {
+    super(props)
+    this.state = {
+      videos: [],
+      selectedVideo: null
     }
-  
-    render() {
-        const videoSearch = _.debounce((term)=>{this.videoSearch(term)}, 300)
-        return (
-            <div>
-                <SearchBar onSearchTermChange={term=>videoSearch(term)} />
-                <VideoDetail video={this.state.selectedVideo} />
-                <VideoList onVideoSelect={selectedVideo=>this.setState({selectedVideo})} videos={this.state.videos} />
-            </div>
-        )
-    }
+  }
 
-    videoSearch(term){
-        YTSearch({ key: API_KEY, term: term }, (videos) => {
-            this.setState({
-                videos: videos,
-                selectedVideo: videos[0]
-            })
-        })
-    }
+  render () {
+    const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300)
+    return (
+      <div>
+        <SearchBar onSearchTermChange={term => videoSearch(term)} />
+        <VideoDetail video={this.state.selectedVideo} />
+        <VideoList onVideoSelect={selectedVideo => this.setState({ selectedVideo })} videos={this.state.videos} />
+      </div>
+    )
+  }
+
+  videoSearch (term) {
+    YTSearch({ key: API_KEY, term: term }, (videos) => {
+      this.setState({
+        videos: videos,
+        selectedVideo: videos[0]
+      })
+    })
+  }
 }
 // Take this componet's generated HTML and put in the DOM
-ReactDOM.render(<App />, document.querySelector('.container'));
+ReactDOM.render(<App />, document.querySelector('.container'))
