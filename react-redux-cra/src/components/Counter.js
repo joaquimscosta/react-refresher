@@ -1,24 +1,24 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const Counter = props => (
-  <div className="counter" >
+  <div className='counter' >
     <button
-      className="counter-action decrement"
+      className='counter-action decrement'
       onClick={() => props.updatePlayerScore(props.index, -1)}>
       -
     </button>
-    <div className="counter-score"> {props.score} </div>
+    <div className='counter-score'> {props.score} </div>
     <button
-      className="counter-action increment"
+      className='counter-action increment'
       onClick={() => props.updatePlayerScore(props.index, 1)}>
       +
     </button>
-  </div>);
+  </div>)
 
 Counter.propTypes = {
   updatePlayerScore: PropTypes.func.isRequired,
-  score: PropTypes.number.isRequired,
-};
+  score: PropTypes.number.isRequired
+}
 
-export default Counter;
+export default Counter
