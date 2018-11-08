@@ -4,13 +4,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.example.coursereview.course.Course;
+import com.example.coursereview.review.Review;
 import com.example.coursereview.course.CourseRepository;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
-
-
 
 @Component
 public class LoadInitData implements ApplicationListener<ContextRefreshedEvent>{
@@ -33,7 +32,15 @@ public class LoadInitData implements ApplicationListener<ContextRefreshedEvent>{
         return Arrays.asList("%s for 101", "%s  0 to 100", "Ninja %s").stream().map(title->{
             Course course = new Course();
             course.setTitle(String.format(title, subject));
+            course.addReview(reviewFactory());
             return course;
         }).collect(Collectors.toList());
+    }
+
+    private Review reviewFactory(){
+        Review review = new Review();
+        review.setRating(3);
+        review.setComment("Blah blah");
+        return review;
     }
 }
