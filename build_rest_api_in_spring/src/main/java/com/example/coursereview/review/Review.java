@@ -8,6 +8,8 @@ import javax.persistence.ManyToOne;
 
 import com.example.coursereview.course.Course;
 
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
