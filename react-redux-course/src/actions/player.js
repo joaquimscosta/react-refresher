@@ -5,7 +5,7 @@ export const addPlayer = name => {
     type: PlayerActionTypes.ADD_PLAYER,
     name
   };
-};sax
+};
 
 export const removePlayer = index => {
   return {
