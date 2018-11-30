@@ -14,6 +14,9 @@ class ParentComponent extends Component{
     componentDidMount(){
         console.log('ParentComponent: componentDidMount')
     }
+    componentWillUnmount(){
+        console.log('ParentComponent: componentWillUnmount')
+    }
 
     constructor(props){
         super(props)

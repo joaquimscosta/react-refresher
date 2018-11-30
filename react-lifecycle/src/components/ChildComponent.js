@@ -25,6 +25,9 @@ class ChildComponent extends Component{
     componentDidMount(){
         console.log('ChildComponent: componentDidMount')
     }
+    componentWillUnmount(){
+        console.log('ChildComponent: componentWillUnmount')
+    }
 
     componentWillReceiveProps(nextProps){
         console.log('ChildComponent: componentWillReceiveProps')
@@ -47,6 +50,14 @@ class ChildComponent extends Component{
         console.log('previousProps:', previousProps)
         console.log('previousState:', previousState)
         return true
+    }
+    componentDidCatch(err, errorInfo){
+        console.log('componentDidCatch')
+        console.error(err)
+        console.error(errorInfo)
+        this.setState(()=>(
+            {err, errorInfo}
+        ))
     }
 
     render(){
