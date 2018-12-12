@@ -14,3 +14,5 @@ how to strucute react/redux app
 # React
 
 React's mental model draws broadly on functional and object-oriented programming concepts and focus on components as primary units for building with.
+
+### Remember to regenerated youtubeapi key since it was exposed
