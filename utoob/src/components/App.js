@@ -9,7 +9,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      videos: []
+      videos: [],
+      selectedVideo: null
     }
   }
 
@@ -19,11 +20,14 @@ class App extends Component {
         <Search onSearch={this.onSearch} />
         <div className='row'>
           <div className='col'>
-            <VideoPlayer />
-            <VideoDetails />
+            <VideoPlayer video={this.state.selectedVideo} />
+            <VideoDetails video={this.state.selectedVideo} />
           </div>
           <div className='col'>
-            <VideoList videos={this.state.videos} />
+            <VideoList
+              videos={this.state.videos}
+              onSelectVideo={this.onSelectVideo}
+            />
           </div>
         </div>
       </div>
@@ -39,6 +43,12 @@ class App extends Component {
     })
     this.setState(() => ({
       videos: response.data.items
+    }))
+  }
+
+  onSelectVideo = video => {
+    this.setState(() => ({
+      selectedVideo: video
     }))
   }
 }

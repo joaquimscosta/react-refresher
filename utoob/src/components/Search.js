@@ -6,7 +6,6 @@ class Search extends Component {
   static propTypes = {
     onSearch: PropTypes.func.isRequired
   }
-
   constructor(props) {
     super(props)
     this.state = {
@@ -29,14 +28,15 @@ class Search extends Component {
       </form>
     )
   }
-
   onChange = event => {
     event.persist()
     const term = event.target.value
-    this.setState(() => ({
-      term
-    }))
-    this.onSearchDebounce(this.state.term)
+    if (term.length > 3) {
+      this.setState(() => ({
+        term
+      }))
+      this.onSearchDebounce(this.state.term)
+    }
   }
   onSubmit = event => {
     event.preventDefault()
