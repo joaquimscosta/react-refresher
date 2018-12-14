@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import youtube from '../api/youtube'
 import VideoList from './VideoList'
 import Search from './Search'
-import VideoPlayer from './VideoPlayer'
 import VideoDetails from './VideoDetails'
 
 class App extends Component {
@@ -20,7 +19,6 @@ class App extends Component {
         <Search onSearch={this.onSearch} />
         <div className='row'>
           <div className='col'>
-            <VideoPlayer video={this.state.selectedVideo} />
             <VideoDetails video={this.state.selectedVideo} />
           </div>
           <div className='col'>

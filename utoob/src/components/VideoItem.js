@@ -5,7 +5,7 @@ const VideoItem = props => {
   const { title, thumbnails } = props.video.snippet
   return (
     <div
-      class='video-item card border-light'
+      className='video-item card border-light'
       onClick={() => props.onSelectVideo(props.video)}
     >
       <img
@@ -13,8 +13,8 @@ const VideoItem = props => {
         src={thumbnails['default'].url}
         alt={title}
       />
-      <div class='card-body text-dark'>
-        <h5 class='card-title'>{title}</h5>
+      <div className='card-body text-dark'>
+        <h5 className='card-title'>{title}</h5>
       </div>
     </div>
   )
