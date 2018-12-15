@@ -1,5 +1,5 @@
 # Redux Cycle
-!(Redux Cycle)[./reduxcycle.png]
+![Redux Cycle](./reduxcycle.png)
 
 ```javascript
 
