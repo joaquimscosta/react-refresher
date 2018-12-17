@@ -13,4 +13,10 @@ how to strucute react/redux app
 
 
 ### Cheat sheet
-http://www.developer-cheatsheets.com/react
+- http://www.developer-cheatsheets.com/react
+- https://levelup.gitconnected.com/react-cheatsheet-this-setstate-8bc12c5f40f5
+- http://jamesknelson.com/react-cheatsheet.pdf
+- https://devhints.io/react
+- https://devhints.io/redux
+- https://devhints.io/es6
+- https://medium.freecodecamp.org/modern-frontend-hacking-cheatsheets-df9c2566c72a
