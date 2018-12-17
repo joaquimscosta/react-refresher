@@ -11,8 +11,6 @@ how to strucute react/redux app
 - https://github.com/markerikson/react-redux-links/blob/master/project-structure.md
 - https://github.com/gothinkster/react-redux-realworld-example-app
 
-# React
 
-React's mental model draws broadly on functional and object-oriented programming concepts and focus on components as primary units for building with.
-
-### Remember to regenerated youtubeapi key since it was exposed
+### Cheat sheet
+http://www.developer-cheatsheets.com/react
