@@ -1,52 +1,29 @@
 {
   "streams": [
     {
+      "title": "Hello",
+      "description": "world1",
       "id": 1
     },
     {
+      "title": "Another",
+      "description": "World",
       "id": 2
     },
     {
+      "title": "And Another",
+      "description": "ONe",
       "id": 3
     },
     {
-      "id": 4
-    },
-    {
+      "title": "Hey one more",
+      "description": "here is the descriptionhh",
       "id": 5
     },
     {
+      "title": "Updating this",
+      "description": "now it is better",
       "id": 6
-    },
-    {
-      "title": "Hello WOrld",
-      "description": "sadfsdf",
-      "id": 7
-    },
-    {
-      "title": "Hello WOrld",
-      "description": "sadfsdf",
-      "id": 8
-    },
-    {
-      "title": "Hello WOrld",
-      "description": "sadfsdf",
-      "id": 9
-    },
-    {
-      "title": "Hello WOrld",
-      "description": "sadfsdf",
-      "id": 10
-    },
-    {
-      "title": "iytuyi",
-      "description": "yityui",
-      "id": 11
-    },
-    {
-      "title": "twert",
-      "description": "werter",
-      "id": 12
     }
   ]
 }
