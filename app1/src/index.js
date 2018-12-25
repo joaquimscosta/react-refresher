@@ -10,7 +10,7 @@ const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY
 
 // Create  a new component
 class App extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       videos: [],
@@ -18,19 +18,24 @@ class App extends Component {
     }
   }
 
-  render () {
-    const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300)
+  render() {
+    const videoSearch = _.debounce(term => {
+      this.videoSearch(term)
+    }, 300)
     return (
       <div>
         <SearchBar onSearchTermChange={term => videoSearch(term)} />
         <VideoDetail video={this.state.selectedVideo} />
-        <VideoList onVideoSelect={selectedVideo => this.setState({ selectedVideo })} videos={this.state.videos} />
+        <VideoList
+          onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
+          videos={this.state.videos}
+        />
       </div>
     )
   }
 
-  videoSearch (term) {
-    YTSearch({ key: API_KEY, term: term }, (videos) => {
+  videoSearch(term) {
+    YTSearch({ key: API_KEY, term: term }, videos => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]

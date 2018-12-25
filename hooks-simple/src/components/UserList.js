@@ -1,8 +1,8 @@
-import React from "react";
-import useResources from "./useResources";
+import React from 'react'
+import useResources from './useResources'
 
 const UserList = () => {
-  const users = useResources("users");
+  const users = useResources('users')
 
   return (
     <ul>
@@ -10,7 +10,7 @@ const UserList = () => {
         <li key={users.id}>{user.name}</li>
       ))}
     </ul>
-  );
-};
+  )
+}
 
-export default UserList;
+export default UserList
