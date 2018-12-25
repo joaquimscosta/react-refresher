@@ -1,43 +1,43 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class SearchBar extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      searchText: ""
-    };
+      searchText: ''
+    }
   }
 
   render() {
     return (
-      <div className="ui segment search-bar">
-        <form className="ui form" onSubmit={this.onSubmit}>
-          <div className="field">
+      <div className='ui segment search-bar'>
+        <form className='ui form' onSubmit={this.onSubmit}>
+          <div className='field'>
             <label>Image Search</label>
             <input
-              type="text"
+              type='text'
               onChange={this.onTextChange}
               value={this.state.searchText}
             />
           </div>
         </form>
       </div>
-    );
+    )
   }
 
   onSubmit = event => {
-    event.preventDefault();
-    this.props.onSearch(this.state.searchText);
-  };
+    event.preventDefault()
+    this.props.onSearch(this.state.searchText)
+  }
   onTextChange = event => {
-    const text = event.target.value;
-    this.setState(() => ({ searchText: text }));
-  };
+    const text = event.target.value
+    this.setState(() => ({ searchText: text }))
+  }
 }
 
 SearchBar.propTypes = {
   onSearch: PropTypes.func.isRequired
-};
+}
 
-export default SearchBar;
+export default SearchBar

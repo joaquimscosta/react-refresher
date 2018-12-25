@@ -10,7 +10,7 @@ const options = {
 }
 
 class App extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       latitude: null,
@@ -18,21 +18,25 @@ class App extends Component {
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     console.log('state=', this.state)
-    window.navigator.geolocation.getCurrentPosition((pos) => {
-      this.setState(() => ({
-        latitude: pos.coords.latitude
-      }))
-    }, (err) => {
-      console.error('error: ', err)
-      this.setState(() => ({
-        errorMessage: err.message
-      }))
-    }, options)
+    window.navigator.geolocation.getCurrentPosition(
+      pos => {
+        this.setState(() => ({
+          latitude: pos.coords.latitude
+        }))
+      },
+      err => {
+        console.error('error: ', err)
+        this.setState(() => ({
+          errorMessage: err.message
+        }))
+      },
+      options
+    )
   }
 
-  render () {
+  render() {
     console.log('rendering.... state=', this.state)
     if (!this.state.errorMessage && this.state.latitude) {
       return <DisplaySeason latitude={this.state.latitude} />

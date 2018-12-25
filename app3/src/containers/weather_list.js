@@ -4,7 +4,7 @@ import Chart from '../components/chart'
 import GoogleMap from '../components/google_map'
 
 class WeatherList extends Component {
-  render () {
+  render() {
     return (
       <table className='table table-hover'>
         <thead>
@@ -15,14 +15,12 @@ class WeatherList extends Component {
             <th>Humidity (%)</th>
           </tr>
         </thead>
-        <tbody>
-          {this.props.weather.map(this.renderWeather)}
-        </tbody>
+        <tbody>{this.props.weather.map(this.renderWeather)}</tbody>
       </table>
     )
   }
 
-  renderWeather (cityData) {
+  renderWeather(cityData) {
     const name = cityData.city.name
     const temps = cityData.list.map(weather => weather.main.temp)
     const pressures = cityData.list.map(weather => weather.main.pressure)
@@ -31,7 +29,9 @@ class WeatherList extends Component {
 
     return (
       <tr key={name}>
-        <td><GoogleMap lon={lon} lat={lat} /></td>
+        <td>
+          <GoogleMap lon={lon} lat={lat} />
+        </td>
         <td>
           <Chart data={temps} color='orange' units='K' />
         </td>
@@ -46,7 +46,7 @@ class WeatherList extends Component {
   }
 }
 
-function mapStateToProps ({ weather }) {
+function mapStateToProps({ weather }) {
   return { weather }
 }
 export default connect(mapStateToProps)(WeatherList)
