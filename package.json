@@ -1,0 +1,32 @@
+{
+  "name": "react-refresher",
+  "version": "1.0.0",
+  "description": "Learning React",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaquimscosta/react-refresher.git"
+  },
+  "author": "Joaquim Costa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaquimscosta/react-refresher/issues"
+  },
+  "homepage": "https://github.com/joaquimscosta/react-refresher#readme",
+  "devDependencies": {
+    "husky": "^1.2.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "1.15.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
