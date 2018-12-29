@@ -18,18 +18,18 @@ class App extends Component {
   }
   render() {
     return (
-      <div className='ui container'>
+      <div className="ui container">
         <div>
           Select a language:
           <i
-            className='flag us'
+            className="flag us"
             onClick={() => this.onLanguageChange('english')}
           />
           <i
-            className='flag pt'
+            className="flag pt"
             onClick={() => this.onLanguageChange('portuguese')}
           />
-          <ColorContext.Provider value='red'>
+          <ColorContext.Provider value="red">
             <LanguageContext.Provider value={this.state.language}>
               <UserCreate />
             </LanguageContext.Provider>

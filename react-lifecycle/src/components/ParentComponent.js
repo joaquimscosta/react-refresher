@@ -34,13 +34,13 @@ class ParentComponent extends Component {
   render() {
     console.log('ParentComponent: render')
     return [
-      <h2 key='h2'>Learn about rendering and lifecycle methods!</h2>,
+      <h2 key="h2">Learn about rendering and lifecycle methods!</h2>,
       <input
-        key='input'
+        key="input"
         value={this.state.text}
         onChange={this.onInputChange}
       />,
-      <ChildComponent key='ChildComponent' name={this.state.text} />
+      <ChildComponent key="ChildComponent" name={this.state.text} />
     ]
   }
 }

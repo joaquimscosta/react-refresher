@@ -16,11 +16,11 @@ class Search extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmit}>
-        <div className='form-group'>
+        <div className="form-group">
           <input
-            className='form-control'
-            type='text'
-            placeholder='enter search text'
+            className="form-control"
+            type="text"
+            placeholder="enter search text"
             onChange={this.onChange}
             value={this.state.term}
           />

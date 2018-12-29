@@ -17,11 +17,11 @@ class StreamDelete extends Component {
           onClick={() => {
             this.props.deleteStream(id)
           }}
-          className='ui button negative'
+          className="ui button negative"
         >
           Delete
         </button>
-        <Link to='/' className='ui button'>
+        <Link to="/" className="ui button">
           Cancel
         </Link>
       </React.Fragment>
@@ -39,7 +39,7 @@ class StreamDelete extends Component {
   render() {
     return (
       <Modal
-        title='Delete Stream'
+        title="Delete Stream"
         content={this.renderContent()}
         actions={this.renderActions()}
         onDismiss={() => history.push('/')}

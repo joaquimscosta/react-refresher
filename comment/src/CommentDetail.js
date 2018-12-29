@@ -3,18 +3,18 @@ import PropTypes from 'prop-types'
 
 const CommentDetail = props => {
   return (
-    <div className='comment'>
-      <a href='/' className='avatar'>
-        <img alt='avatar' src={props.avatar} />
+    <div className="comment">
+      <a href="/" className="avatar">
+        <img alt="avatar" src={props.avatar} />
       </a>
-      <div className='content'>
-        <a href='/' className='author'>
+      <div className="content">
+        <a href="/" className="author">
           {props.author}
         </a>
       </div>
-      <div className='metadata'>
+      <div className="metadata">
         <span>{props.time}</span>
-        <div className='text'>{props.text}</div>
+        <div className="text">{props.text}</div>
       </div>
     </div>
   )

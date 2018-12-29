@@ -37,13 +37,13 @@ class GoogleAuth extends Component {
   }
   renderAuthButton = () => {
     return this.props.authenticated ? (
-      <button className='ui red google button' onClick={this.onSignOutClick}>
-        <i className='google icon' />
+      <button className="ui red google button" onClick={this.onSignOutClick}>
+        <i className="google icon" />
         Sign Out
       </button>
     ) : (
-      <button className='ui green google button' onClick={this.onSignInClick}>
-        <i className='google icon' />
+      <button className="ui green google button" onClick={this.onSignInClick}>
+        <i className="google icon" />
         Sign in with Google
       </button>
     )

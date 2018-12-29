@@ -63,7 +63,7 @@ class ChildComponent extends Component {
     if (this.state.oops) {
       throw new Error('Something went wrong')
     }
-    return [<div key='name'> Name: {this.props.name} </div>]
+    return [<div key="name"> Name: {this.props.name} </div>]
   }
 }
 export default ChildComponent

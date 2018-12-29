@@ -15,13 +15,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className='container app'>
+      <div className="container app">
         <Search onSearch={this.onSearch} />
-        <div className='row'>
-          <div className='col'>
+        <div className="row">
+          <div className="col">
             <VideoDetails video={this.state.selectedVideo} />
           </div>
-          <div className='col'>
+          <div className="col">
             <VideoList
               videos={this.state.videos}
               onSelectVideo={this.onSelectVideo}

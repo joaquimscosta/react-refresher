@@ -9,12 +9,12 @@ const VideoDetails = props => {
       <div>
         <VideoPlayer video={props.video} />
         <div
-          className='card bg-light mb-3 video-details'
+          className="card bg-light mb-3 video-details"
           style={{ maxWidth: '100%' }}
         >
-          <div className='card-body'>
-            <h5 className='card-title'>{title}</h5>
-            <p className='card-text'>{description}</p>
+          <div className="card-body">
+            <h5 className="card-title">{title}</h5>
+            <p className="card-text">{description}</p>
           </div>
         </div>
       </div>

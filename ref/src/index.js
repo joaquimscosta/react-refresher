@@ -34,7 +34,7 @@ class App extends Component {
             this.mapElement = element
           }}
         />
-        <div id='map' />
+        <div id="map" />
       </div>
     )
   }

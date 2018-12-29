@@ -3,14 +3,14 @@ import { Field, reduxForm } from 'redux-form'
 
 class StreamForm extends Component {
   renderError({ error, touched }) {
-    return touched && <small className='ui error message'>{error}</small>
+    return touched && <small className="ui error message">{error}</small>
   }
 
   renderInput = ({ input, label, meta }) => {
     return (
-      <div className='field'>
+      <div className="field">
         <label>{label}</label>
-        <input {...input} autoComplete='off' />
+        <input {...input} autoComplete="off" />
         {this.renderError(meta)}
       </div>
     )
@@ -24,15 +24,15 @@ class StreamForm extends Component {
     return (
       <form
         onSubmit={this.props.handleSubmit(this.onSubmit)}
-        className='ui form error'
+        className="ui form error"
       >
-        <Field name='title' component={this.renderInput} label='Enter Title' />
+        <Field name="title" component={this.renderInput} label="Enter Title" />
         <Field
-          name='description'
+          name="description"
           component={this.renderInput}
-          label='Enter Description'
+          label="Enter Description"
         />
-        <button className='ui button primary'>Submit</button>
+        <button className="ui button primary">Submit</button>
       </form>
     )
   }

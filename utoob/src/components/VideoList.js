@@ -9,7 +9,7 @@ const VideoList = props => {
       onSelectVideo={props.onSelectVideo}
     />
   ))
-  return <div className='video-list'>{videos}</div>
+  return <div className="video-list">{videos}</div>
 }
 
 VideoList.propTypes = {

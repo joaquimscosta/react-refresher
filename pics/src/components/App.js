@@ -12,7 +12,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className='ui container' style={{ marginTop: '25px' }}>
+      <div className="ui container" style={{ marginTop: '25px' }}>
         <SearchBar onSearch={this.handleSearch} />
         <ImageList images={this.state.images} />
       </div>

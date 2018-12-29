@@ -44,7 +44,7 @@ class App extends Component {
     if (this.state.errorMessage && !this.state.latitude) {
       return <div>Error: {this.state.errorMessage}</div>
     }
-    return <Spinner message='Please accept location request' />
+    return <Spinner message="Please accept location request" />
   }
 }
 

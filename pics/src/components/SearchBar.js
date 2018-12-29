@@ -11,12 +11,12 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className='ui segment search-bar'>
-        <form className='ui form' onSubmit={this.onSubmit}>
-          <div className='field'>
+      <div className="ui segment search-bar">
+        <form className="ui form" onSubmit={this.onSubmit}>
+          <div className="field">
             <label>Image Search</label>
             <input
-              type='text'
+              type="text"
               onChange={this.onTextChange}
               value={this.state.searchText}
             />
